@@ -81,11 +81,13 @@ static RedirEntry kRedirMap[] = {
     nsIAboutModule::ALLOW_SCRIPT },
   { "sync-tabs", "chrome://browser/content/sync/aboutSyncTabs.xul",
     nsIAboutModule::ALLOW_SCRIPT },
+#ifndef MOZ_B2G
   { "home", "chrome://browser/content/abouthome/aboutHome.xhtml",
     nsIAboutModule::URI_SAFE_FOR_UNTRUSTED_CONTENT |
     nsIAboutModule::URI_MUST_LOAD_IN_CHILD |
     nsIAboutModule::ALLOW_SCRIPT |
     nsIAboutModule::ENABLE_INDEXED_DB },
+#endif
   // the newtab's actual URL will be determined when the channel is created
   { "newtab", "about:blank",
     nsIAboutModule::ALLOW_SCRIPT },
